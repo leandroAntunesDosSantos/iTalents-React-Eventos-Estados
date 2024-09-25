@@ -1,0 +1,11 @@
+#books {
+    padding: 20px 0;
+}
+
+.book-cards {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+    min-height: 500px;
+}
+

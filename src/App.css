@@ -1,0 +1,30 @@
+.container {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.mb20 {
+    margin-bottom: 20px;
+}
+
+.mt20 {
+    margin-top: 20px;
+}
+
+:root {
+    --bg-color: #f4f4f4;
+    --primary-color: #F28E13;
+    --secondary-color:#F2A413;
+    --tertiary-color: #04BFAD;
+    --quaternary-color: #F252AA;
+    --quinary-color:#F20F38;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: #fff;
+}

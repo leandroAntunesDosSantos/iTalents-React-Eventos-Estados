@@ -1,0 +1,11 @@
+.btn-buy{
+    height: 40px;
+    width: 100%;
+    background-color: var(--quaternary-color);
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}

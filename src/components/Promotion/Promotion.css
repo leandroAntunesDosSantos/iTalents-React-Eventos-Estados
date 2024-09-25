@@ -1,0 +1,15 @@
+.promotion {
+    background-color: #000;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 10px;
+    
+}
+
+
+.title-main {
+    color: var(--quaternary-color);
+    text-align: center;
+    margin: 2rem 0;
+    font-size: 2rem;
+}

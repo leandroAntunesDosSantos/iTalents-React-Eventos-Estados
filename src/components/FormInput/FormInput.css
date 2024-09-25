@@ -1,0 +1,18 @@
+.form-group{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form-group label{
+    font-size: 1.2rem;
+    color: #000;
+}
+
+.form-group input{
+    height: 20px;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
+}

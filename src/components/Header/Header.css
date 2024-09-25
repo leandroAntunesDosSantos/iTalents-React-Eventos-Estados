@@ -1,0 +1,34 @@
+header {
+    background-color: var(--primary-color);
+    min-height: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    font-size: 24px;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    margin-left: 20px;
+    display: block;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 24px;
+    color: aliceblue;
+}
+
+.bookstore-name {
+    margin-right: 20px;
+}

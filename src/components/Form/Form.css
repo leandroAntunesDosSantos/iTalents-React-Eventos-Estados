@@ -1,0 +1,30 @@
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    max-width: 50%;
+    color: #000;
+    margin: 5rem auto 0 auto;
+}
+
+.form h2{
+    font-size: 2rem;
+    color: var(--quaternary-color);
+}
+
+.form button{
+    height: 40px;
+    background-color: var(--quaternary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.form button:hover{
+    background-color: var(--quinary-color);
+}
+
+
