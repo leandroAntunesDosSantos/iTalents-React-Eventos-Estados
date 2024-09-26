@@ -1,16 +1,23 @@
 import Book from '../Book/Book';
 import './Booklist.css';
-import book from '../DBbooks/DBbooks';
 import Promotion from '../Promotion/Promotion';
 import FormInput from '../FormInput/FormInput';
-import { useState } from 'react';
-
+//import DBbooks from '../DBbooks/DBbooks';
+import { useEffect, useState } from 'react';
 
 export default function BookList() {
-  
-  const [books, setBooks] = useState(book);
+  const [books, setBooks] = useState([]);
 
-  function handleSubmit(event) {
+  useEffect(() => {
+    fetch('http://localhost:3005/books')
+      .then(response => response.json())
+      .then(data => setBooks(data))
+      .catch((error) => {
+        console.error('Error:', error);
+      });
+  }, []); 
+
+  const handleSubmit = async(event) => {
     event.preventDefault();
     const titulo = document.getElementById('titulo').value;
     const autor = document.getElementById('autor').value;
@@ -23,13 +30,23 @@ export default function BookList() {
       imagem,
       alt
     };
-    setBooks([...books, newBook]);
+
+    const response = await fetch('http://localhost:3005/books', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(newBook),
+    })
+    const data = await response.json();
+    setBooks([...books, data]);
+    
     document.getElementById('titulo').value = '';
     document.getElementById('autor').value = '';
     document.getElementById('imagem').value = '';
     document.getElementById('alt').value = '';
   }
-  
+
     return (
     <main id="books" className="container">
       <Promotion>
@@ -55,7 +72,6 @@ export default function BookList() {
             />
           ))}
           </ul>
-        
     </main>
     );
 }

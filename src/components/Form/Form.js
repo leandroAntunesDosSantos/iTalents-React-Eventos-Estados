@@ -4,6 +4,7 @@ import Button from '../Button/Button';
 
 
 export default function Form() {
+
     return (
         <form className='form mt-20'>
             <h2>Quer receber novidades e promoções?</h2>
