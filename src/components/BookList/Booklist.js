@@ -2,20 +2,22 @@ import Book from '../Book/Book';
 import './Booklist.css';
 import Promotion from '../Promotion/Promotion';
 import FormInput from '../FormInput/FormInput';
-//import DBbooks from '../DBbooks/DBbooks';
-import { useEffect, useState } from 'react';
+import DBbooks from '../DBbooks/DBbooks';
+import {useState } from 'react';
+//import { useEffect } from 'react';
 
 export default function BookList() {
-  const [books, setBooks] = useState([]);
+  const [books, setBooks] = useState(DBbooks);
 
-  useEffect(() => {
-    fetch('http://localhost:3005/books')
-      .then(response => response.json())
-      .then(data => setBooks(data))
-      .catch((error) => {
-        console.error('Error:', error);
-      });
-  }, []); 
+  // <-- requisicao GET caso use um servidor local
+  // useEffect(() => {
+  //   fetch('http://localhost:3005/books')
+  //     .then(response => response.json())
+  //     .then(data => setBooks(data))
+  //     .catch((error) => {
+  //       console.error('Error:', error);
+  //     });
+  // }, []); 
 
   const handleSubmit = async(event) => {
     event.preventDefault();
@@ -31,15 +33,17 @@ export default function BookList() {
       alt
     };
 
-    const response = await fetch('http://localhost:3005/books', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(newBook),
-    })
-    const data = await response.json();
-    setBooks([...books, data]);
+    //<-- requisicao POST caso use um servidor local
+    // const response = await fetch('http://localhost:3005/books', {
+    //   method: 'POST',
+    //   headers: {
+    //     'Content-Type': 'application/json',
+    //   },
+    //   body: JSON.stringify(newBook),
+    // })
+    // const data = await response.json();
+    // setBooks([...books, data]);
+    setBooks([...books, newBook]);
     
     document.getElementById('titulo').value = '';
     document.getElementById('autor').value = '';

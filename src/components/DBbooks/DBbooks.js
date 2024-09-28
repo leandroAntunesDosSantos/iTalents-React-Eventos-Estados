@@ -59,7 +59,7 @@ const DBbooks = [
       id: 9,
       titulo: "O poder do agora",
       autor: "Eckhart Tolle",
-      imagem: "https://m.media-amazon.com/images/I/71Ils+Co9fL._AC_UF1000,1000_QL80_.jpg",
+      imagem: "https://m.media-amazon.com/images/I/71sh8JtiZbL._AC_UF1000,1000_QL80_.jpg",
       alt: "Foto livro o poder do agora"
     },
     {
