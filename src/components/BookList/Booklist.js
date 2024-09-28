@@ -10,6 +10,11 @@ export default function BookList() {
   const [books, setBooks] = useState(DBbooks);
 
   // <-- requisicao GET caso use um servidor local
+  // Pode ser utilizado json-server para simular um servidor local
+  //para instalar o json-server, execute o comando npm install -g json-server
+  //para rodar o json-server, execute o comando json-server --watch db.json --port 3005
+  //Assim ele fara a leitura do arquivo db.json e disponibilizara os dados na porta 3005
+
   // useEffect(() => {
   //   fetch('http://localhost:3005/books')
   //     .then(response => response.json())
@@ -33,7 +38,12 @@ export default function BookList() {
       alt
     };
 
-    //<-- requisicao POST caso use um servidor local
+    //<-- requisicao POST caso use um servidor local 
+    // Pode ser utilizado json-server para simular um servidor local
+    //para instalar o json-server, execute o comando npm install -g json-server
+    //para rodar o json-server, execute o comando json-server --watch db.json --port 3005
+    // assim ele fara a leitura do arquivo db.json e disponibilizara os dados na porta 3005
+    
     // const response = await fetch('http://localhost:3005/books', {
     //   method: 'POST',
     //   headers: {
